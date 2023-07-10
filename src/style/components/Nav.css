@@ -57,5 +57,5 @@ nav button:hover {
   background-color: #ffb703;
   color: #023047;
   border: none;
-  transform: translateX(5px) translateY(5px);
+  transform: translateX(2px) translateY(2px);
 }
