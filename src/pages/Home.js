@@ -15,7 +15,8 @@ function Home() {
       console.log(result.data);
       setFlagList(result.data);
     });
-  }, []);
+  }, [searchValue]);
+
   return (
     <div>
       <Nav />
@@ -99,16 +100,12 @@ function Home() {
               if (a.translations.fra.common < b.translations.fra.common) {
                 return -1;
               }
-              if (a.translations.fra.common > b.translations.fra.common) {
-                return 1;
-              }
-            } else if (sortMethod === "superficie") {
+              return 1;
+            } else {
               if (a.area < b.area) {
                 return -1;
               }
-              if (a.area > b.area) {
-                return 1;
-              }
+              return 1;
             }
           })
           .slice(0, rangeValue)
